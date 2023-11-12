@@ -55,7 +55,7 @@
       state: restarted
       daemon_reload: true
   - name: copy mongo repo to yum.repos.d
-    nasible.builtin.copy:
+    ansible.builtin.copy:
       src: mongo.repo
       dest: /etc/yum.repos.d/mongo.repo
   - name: Install MongoDB
