@@ -59,7 +59,7 @@
       src: mongo.repo
       dest: /etc/yum.repos.d/mongo.repo
   - name: Install MongoDB
-    ansible.cuiltin.yum:
+    ansible.builtin.yum:
       name: mongodb-org-shell
       state: installed
   - name: load catalogue date
