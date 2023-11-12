@@ -10,8 +10,8 @@
       state: installed
   - name: check roboshop user exist or not
     ansible.builtin.command: id roboshop
-    register: out
-    igonre_errors: true
+      register: out
+      igonre_errors: true
   - when: out.rc !=0
     name: create user roboshop
     ansible.builtin.user:
