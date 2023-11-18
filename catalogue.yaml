@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: setup NPM source
-    ansible.builtin.shell: curl -sL https://rpm.nodesource.com/setup_lts.x | bash
+    ansible.builtin.shell: "curl -sL https://rpm.nodesource.com/setup_lts.x | bash"
   - name: install nodeJS
     ansible.builtin.yum:
       name: nodejs
@@ -16,6 +16,7 @@
 
   - when: out.rc !=0
     name: create user roboshop
+    become: yes
     ansible.builtin.user:
       name: roboshop
 
